@@ -12,6 +12,9 @@ https://www.iconfinder.com/Makoto_msk */}
         <Link to="/">
           <img src={logo} alt="store" className="navbar-brand"></img>
         </Link>
+        <ul className="navbar-nav align-items-center">
+
+        </ul>
       </nav>
     );
   }
