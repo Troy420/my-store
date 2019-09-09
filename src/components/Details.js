@@ -41,8 +41,25 @@ class Details extends Component {
                     {price}
                   </h4>
                   <p className="text-capitalize font-weight-bold mt-3 mb-0">
-                    information :<p className="text-muted lead">{info}</p>
+                    information :
                   </p>
+                  <p className="text-muted lead">{info}</p>
+                  {/* Buttons */}
+                  <div>
+                    <Link to="/">
+                      <ButtonContainer>Back To Products</ButtonContainer>
+                    </Link>
+                    <ButtonContainer
+                      cart
+                      disabled={inCart ? true : false}
+                      onClick={() => {
+                        value.addToCart(id);
+                        value.openModal(id);
+                      }}
+                    >
+                      {inCart ? "In Cart" : "Add To Cart"}
+                    </ButtonContainer>
+                  </div>
                 </div>
               </div>
               {/* end of product info */}
